@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Todo App</title>
+	<link rel="stylesheet" type="text/css" href="todo_style.css">
+
+</head>
+
+<body>
+	<section class="sample">
+		<div class="container">
+			<div class="row">
+
+				<div class="item">
+					<div class="header">
+						<h2>Задачки</h2>
+						<input type="text" id="input" placeholder="Что будем делать?">
+						<span onclick="newElement()" class="addBtn">добавить</span>
+					</div>
+					<ul id="ul">
+						<li class="checked">Выспаться</li>
+						<li>Выучить Vue.js</li>
+						<li>Что-то ещё не менее интересное</li>
+					</ul>
+				</div>
+
+				<div class="item">
+					<a href="index.html" target="_blank"><h2>Почитать новости?</h2></a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="todo_main.js"></script>
+
+</body>
+
+</html>
