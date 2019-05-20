@@ -149,5 +149,4 @@ button:focus {
 
 .article a:hover, .article a:focus {
   cursor: pointer;
-  font-size: 20px;
 }

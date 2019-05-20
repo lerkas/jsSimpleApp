@@ -13,9 +13,9 @@ function newElement() {
   document.querySelector("#input").value = "";
 
   let span = document.createElement("span");
-  let txt = document.createTextNode("✖");
+  let x = document.createTextNode("✖");
   span.className = "close";
-  span.appendChild(txt);
+  span.appendChild(x);
   li.appendChild(span);
 
   for (let i = 0; i < close.length; i++) {
@@ -26,8 +26,17 @@ function newElement() {
   }
 }
 
+
+// Добавляем галочку на выполненном деле
+let list = document.querySelector("ul");
+list.addEventListener("click", function(e) {
+  if (e.target.tagName === "LI") {
+    e.target.classList.toggle("checked");
+  }
+}, false);
+
 // Создаём закрываюший крестик
-let myTodolist = document.getElementsByTagName("li");
+let myTodolist = document.querySelectorAll("li");
 for (let i = 0; i < myTodolist.length; i++) {
   let span = document.createElement("span");
   let txt = document.createTextNode("✖");
@@ -36,10 +45,8 @@ for (let i = 0; i < myTodolist.length; i++) {
   myTodolist[i].appendChild(span);
 }
 
-/*
-Удаляем элемент при нажатиии на крестик
-Не могу понять почему не работает при такой записи document.querySelectorAll(".close");
-*/
+//Удаляем элемент при нажатиии на крестик
+
 let close = document.getElementsByClassName("close");
 for (let i = 0; i < close.length; i++) {
   close[i].onclick = function() {
@@ -48,11 +55,13 @@ for (let i = 0; i < close.length; i++) {
   }
 }
 
-// Добавляем галочку на выполненном деле
-let list = document.querySelector("ul");
-list.addEventListener("click", function(ev) {
-  if (ev.target.tagName === "LI") {
-    ev.target.classList.toggle("checked");
-  }
-}, false);
 
+
+/*
+
+
+
+
+
+
+*/
